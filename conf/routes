@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file         		      	controllers.Assets.at(path="/public", file)
+
+GET 	/ 									controllers.Assets.at(path="/public", file="index.html")
+
+#Création
+POST 	/client  							controllers.Clients.create()
+
+#Mise à jour
+PUT 	/client/:id  						controllers.Clients.update(id: Long)     
+
+#Rechercher par Id
+GET  	/client/:id 						controllers.Clients.getById(id: Long)
+
+#Supprimer par Id
+DELETE 	/client/:id  						controllers.Clients.delete(id: Long)
+
+#Retrouver tous les éléments
+GET 	/clients							controllers.Clients.getAll()
+
+#Retrouver certains éléments
+GET 	/clients/:fieldName/equals/:value 	controllers.Clients.query(fieldName: String, value: String)

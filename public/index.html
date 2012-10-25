@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Clients</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <h1>Clients</h1>
+
+        <!-- définition du template -->
+        <script type="text/template" id="clients_list_template">
+
+            <ul>{{#clients}}
+                <li>{{id}} {{prenom}} {{nom}}</li>
+            {{/clients}}</ul>
+
+        </script>
+        <!-- les résultats viendront ici -->
+        <div id="clients_list"></div>
+
+    </body>
+
+    <script src="assets/javascripts/yepnope.js"></script>
+    <script src="assets/main.js"></script>
+
+</html>
